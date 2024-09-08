@@ -1,11 +1,9 @@
-// Get form and resume elements
 const resumeForm = document.getElementById("resumeForm") as HTMLFormElement;
 const resumeContainer = document.getElementById("resume") as HTMLElement;
 
 resumeForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // Collect form data
   const name = (document.getElementById("name") as HTMLInputElement).value;
   const email = (document.getElementById("email") as HTMLInputElement).value;
   const degree = (document.getElementById("degree") as HTMLInputElement).value;
@@ -21,7 +19,6 @@ resumeForm.addEventListener("submit", (e) => {
     document.getElementById("skills") as HTMLInputElement
   ).value.split(",");
 
-  // Generate resume content
   resumeContainer.innerHTML = `
     <h3>${name}</h3>
     <p>Email: ${email}</p>
